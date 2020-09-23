@@ -35,6 +35,8 @@ bindsym $mod+Ctrl+m exec terminal -e 'alsamixer'
 ################################################################################################
 
 # Start Applications
+exec --no-startup-id toff
+
 bindsym $mod+Ctrl+b exec terminal -e 'bmenu'
 
 bindsym $mod+F2 exec chromium
@@ -146,7 +148,6 @@ bindsym $mod+Shift+8 move container to workspace $ws8; workspace $ws8
 
 # Open applications on specific workspaces
 assign [class="Rambox"] $ws8
-assign [class="clion"] $ws7
 
 
 # switch to workspace with urgent window automatically
