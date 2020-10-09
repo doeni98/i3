@@ -16,7 +16,8 @@ hide_edge_borders none
 font xft:URWGothic-Book 11
 
 # start a terminal
-bindsym $mod+Return exec terminal
+# bindsym $mod+Return exec terminal
+bindsym $mod+Return exec terminal -e zsh
 
 # kill focused window
 bindsym $mod+Shift+q kill
@@ -35,7 +36,7 @@ bindsym $mod+Ctrl+m exec terminal -e 'alsamixer'
 ################################################################################################
 
 # Start Applications
-exec --no-startup-id toff
+
 
 bindsym $mod+Ctrl+b exec terminal -e 'bmenu'
 
