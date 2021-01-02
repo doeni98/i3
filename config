@@ -48,27 +48,32 @@ bindsym $mod+Shift+j exec javaws ~/Documents/jtt.jnlp
 bindsym $mod+F12 exec terminal -e 'reds'
 bindsym $mod+Shift+F12 exec terminal -e 'redsssh'
 
+#windows
+bindsym $mod+Shift+F4 exec terminal -e 'windows' #rdesktop -u denis_bourqui@hotmail.com -p Mojo-498 192.168.1.20:3389 -k de-ch
+
+
+
 bindsym Print --release exec --no-startup-id i3-scrot -s
 bindsym $mod+F8 exec chromium --app="https://music.youtube.com"
 bindsym $mod+F7 exec chromium --app="https://web.whatsapp.com"
 bindsym $mod+F6 exec chromium --app="https://web.telegram.org"
-bindsym $mod+F4 exec /home/deni/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/193.6911.21/bin/clion.sh
+
+bindsym $mod+s exec chromium --app="https://www.webfx.com/tools/emoji-cheat-sheet/#emoji-people"
+
+bindsym $mod+F4 exec /home/deni/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/202.8194.17/bin/clion.sh
 
 bindsym $mod+F5 exec /home/deni/.local/share/JetBrains/Toolbox/apps/IDEA-U/ch-0/193.6911.18/bin/idea.sh
 
-bindsym $mod+F9 exec java -jar /home/deni/ownCloud/heig-vd/ba04/ifs/logisim.jar
+#bindsym $mod+F9 exec java -jar /home/deni/ownCloud/heig-vd/ba04/ifs/logisim.jar
 
 exec owncloud
 
 # monitors
 bindsym $mod+p move workspace to output right
 
-bindsym $mod+Shift+p exec xrandr --auto --output HDMI2 --right-of eDP1
+bindsym $mod+Shift+p exec xrandr --auto --output HDMI2 --left-of eDP1
 bindsym $mod+Shift+F2 exec xrandr --output eDP1 --off
 bindsym $mod+Shift+F3 exec xrandr --output eDP1 --auto
-
-#windows
-bindsym $mod+Shift+F4 exec rdesktop -u denis_bourqui@hotmail.com -p Mojo-498 192.168.1.20:3389 -k de-ch
 
 # screenshot
 bindsym Print exec gnome-screenshot -i 
@@ -148,7 +153,7 @@ bindsym $mod+Shift+7 move container to workspace $ws7; workspace $ws7
 bindsym $mod+Shift+8 move container to workspace $ws8; workspace $ws8
 
 # Open applications on specific workspaces
-assign [class="Rambox"] $ws8
+assign [class="spotify"] $ws8
 
 
 # switch to workspace with urgent window automatically
@@ -209,7 +214,7 @@ exec --no-startup-id clipit
 # exec_always --no-startup-id sbxkb
 exec --no-startup-id start_conky_maia
 # exec --no-startup-id start_conky_green
-exec --no-startup-id xautolock -time 10 -locker blurlock
+#exec --no-startup-id xautolock -time 10 -locker blurlock
 exec_always --no-startup-id ff-theme-util
 exec_always --no-startup-id fix_xcursor
 
@@ -291,8 +296,8 @@ bindsym $mod+m bar mode toggle
 #############################
 
 # Set inner/outer gaps
-gaps inner 14
-gaps outer -2
+gaps inner 7
+gaps outer -1
 
 # Additionally, you can issue commands with the following syntax. This is useful to bind keys to changing the gap size.
 # gaps inner|outer current|all set|plus|minus <px>
